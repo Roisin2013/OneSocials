@@ -3,9 +3,9 @@
   <head>
     <title>php-sdk</title>
     <!-- Bootstrap core CSS -->
-    <link href="Bootstrap/bootstrap-3.0.0/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.css" rel="stylesheet">
     <!-- Bootstrap theme -->
-    <link href="Bootstrap/bootstrap-3.0.0/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href=="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="theme.css" rel="stylesheet">
@@ -20,11 +20,11 @@
       h1 a:hover {
         text-decoration: underline;
       }
-      
+
     </style>
   </head>
   <body>
-    <h1>php-sdk</h1>
+    <h1>One Social</h1>
 <?php include 'facebook.php';
 include 'Merg.php';
 
@@ -32,26 +32,26 @@ $user=getUser();
 
 ?>
     <?php if ($user): ?>
-    	<?php 
+    	<?php
     	$logoutUrl=getlogout($user); ?>
       <a href="<?php echo $logoutUrl; ?>">Logout</a>
     <?php else: ?>
       <div>
-      	<?php 
-    	$loginUrl=getlogged(); 
+      	<?php
+    	$loginUrl=getlogged();
     	?>
-        Login using OAuth 2.0 handled by the PHP SDK:
+        Login to Facebook:
         <a href="<?php echo $loginUrl; ?>">Login with Facebook</a>
       </div>
-      
+
     <?php endif ?>
 
-    <h3>PHP Session</h3>
-    
+
+
 <table><tr><td style="width:500px;">
-    <?php if ($user): 
+    <?php if ($user):
       $facebook=facbookPost($user);
-	  
+
 	  include 'Twitter.php';
    $twitter=twitterConnect();
    $merged=array_merge($facebook, $twitter);
@@ -65,11 +65,11 @@ $user=getUser();
     echo "<div class='well'>";
 	  if($value["network"]=="Facebook"){
     echo "<button type='button' class='btn btn-lg btn-primary'>";
-		 
+
 	}
 	else{
 	echo "<button type='button' class='btn btn-lg btn-info'>";
-		
+
 	}
      echo "<img src='".$value["image"]."'/>";
      echo " ".$value["name"]." - ".$value["created"];
@@ -79,15 +79,15 @@ $user=getUser();
     echo"</div>";
     echo "<div id='collapse".$One."' class='accordion-body collapse'>";
       echo "<div class='accordion-inner'>";
-	  
+
 	  if($value["network"]=="Facebook"){
     echo "<div class='well well-sm' style=''>";
 	}
 	else{
 	echo "<div class='well well-sm' style=''>";
-		
+
 	}
-	
+
        if(array_key_exists("postImage", $value)){
 	   	echo "<img src='".$value["postImage"]."'/>";
 	   }
@@ -101,12 +101,12 @@ $user=getUser();
        	echo $value["text"];
        }
 	   //if($value["network"]=="Facebook"){
-    
+
 	   //echo"</div>";
 		 //  }
 	   echo "</div>";
       // print_r($value);
-      
+
     echo"</div>";
 	if($value["network"]=="Twitter"){
   echo "</br>";
@@ -116,19 +116,19 @@ $user=getUser();
   }
    echo "</div>";
       ?>
-      	
-          
-  
- 
 
-      
+
+
+
+
+
     <?php else: ?>
       <strong><em>You are not Connected.</em></strong>
     <?php endif ?>
     </td><td style="vertical-align:text-top;">
-        	
-              <script src="Bootstrap/bootstrap-3.0.0/assets/js/jquery.js"></script>
-    <script src="Bootstrap/bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
-    <script src="Bootstrap/bootstrap-3.0.0/assets/js/holder.js"></script>
+
+              <script src="https://code.jquery.com/jquery.js"></script>
+    <script src=="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="bootstrap-3.0.2/docs-assets/js/holder.js"></script>
   </body>
 </html>
