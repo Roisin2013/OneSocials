@@ -129,6 +129,6 @@ $user=getUser();
 
               <script src="https://code.jquery.com/jquery.js"></script>
     <script src=="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-    <script src="bootstrap-3.0.2/docs-assets/js/holder.js"></script>
+    <script src="Bootstrap/bootstrap-3.0.0/assets/js/holder.js"></script>
   </body>
 </html>
