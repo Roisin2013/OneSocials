@@ -72,8 +72,9 @@ $user=getUser();
 	 echo "</div>";
 	 echo"</div>";
     echo"</div>";
-    echo "<div id='collapse".$One."' class='accordion-body collapse'>";
-      echo "<div class='accordion-inner'>";
+    echo "<div id='collapse".$One."' class='panel-collapse collapse'>";
+      echo "<div class='panel-body'>
+";
 
 	  if($value["network"]=="Facebook"){
     echo "<div class='well well-sm' style=''>";
