@@ -58,7 +58,7 @@ $user=getUser();
     echo "<div class='panel-heading'>
 ";
     echo "<div class='accordion-toggle' data-toggle='collapse' data-parent='#accordion2' href='#collapse".$One."'>";
-    echo "<div class='well'>";
+   
 	 if($value["network"]=="Facebook"){
     echo "<button type='button' class='btn btn-lg btn-primary'>";
 
