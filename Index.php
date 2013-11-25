@@ -54,8 +54,9 @@ $user=getUser();
    echo "<div class='accordion' id='accordion2'>";
    $One=1;
    foreach ($sorted as $value) {
-   	echo "<div class='accordion-group'>";
-    echo "<div class='accordion-heading'>";
+   	echo "<div class='panel panel-default'>";
+    echo "<div class='panel-heading'>
+";
     echo "<div class='accordion-toggle' data-toggle='collapse' data-parent='#accordion2' href='#collapse".$One."'>";
     echo "<div class='well'>";
 	 if($value["network"]=="Facebook"){
